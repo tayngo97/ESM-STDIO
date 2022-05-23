@@ -76,18 +76,24 @@ VALUES ('1', 'Ly', '18', 'Da nang', 'image1', '2022-12-31','2022-12-31','2022-12
 
 INSERT INTO `account` (`id`, `username`, `password`, `create_at`, `modify_at`, `delete_flag`)
  VALUES ('1', 'admin', '$2a$12$.Mfx0vhTiWRZL723RZD4.uROZM6QVKpYJ4ZM.JSuc54IJVMz7rJAi', '2022-12-31', 
+ '2023-12-31 23:59:59', 0),
+ ('2', 'hung', '$2a$12$.Mfx0vhTiWRZL723RZD4.uROZM6QVKpYJ4ZM.JSuc54IJVMz7rJAi', '2022-12-31', 
  '2023-12-31 23:59:59', 0);
  
 INSERT INTO role (`id`, `name`, `create_at`,`modify_at`) VALUES 
 ('1', 'ROLE_ADMIN','2023-12-31','2023-12-31'),
 ('2', 'ROLE_EMPLOYEE','2023-12-31','2023-12-31');
 
-INSERT INTO accounts_roles (`account_id`, `role_id`) VALUES ('1', '1');
+INSERT INTO accounts_roles (`account_id`, `role_id`) VALUES
+ ('1', '1'),
+ ('2', '2');
 
 INSERT INTO employees_projects (`employee_id`, `project_id`) VALUES 
 ('1', '2'),
 ('1', '3'),
-('1', '1');
+('1', '1'),
+('2', '2'),
+('2', '3');
 
 INSERT INTO employee_skills (`employee_id`, `skills_id`,`level_of_skill_id`) VALUES 
 ('1', '2','3'),
